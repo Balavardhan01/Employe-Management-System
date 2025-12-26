@@ -3,7 +3,7 @@ import React from 'react'
 const Header = () => {
   return (
     <div>
-       <div className=' mt-5 flex items-end justify-between p-5'>
+       <div className=' mt-2 flex items-end justify-between p-3'>
 
 
          <div>
