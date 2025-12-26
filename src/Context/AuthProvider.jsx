@@ -1,9 +1,9 @@
 import React from 'react'
 
-const AuthProvider = ({Children}) => {
+const AuthProvider = () => {
   return (
     <div>
-      {Children}
+     
     </div>
   )
 }
