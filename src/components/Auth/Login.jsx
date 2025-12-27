@@ -17,12 +17,21 @@ const Login = ({handleLogin}) => {
    }
 
   return (
-    <div className='border-2 border-blue-300 p-20 flex justify-center h-max w-max m-auto mt-50 rounded-2xl hover:border-cyan-700'>
+    <div className='flex  justify-between flex-col gap-none'>
+      <div>
+       <h1 className="text-cyan-400 text-center mt-32 mb-8 text-5xl font-extrabold tracking-wide">
+  Employee Management System
+</h1>
+
+      </div>
+    <div className='border-2 text-white border-blue-300 p-20 flex justify-center h-max w-max m-auto mt-10 rounded-2xl hover:border-cyan-700'>
+        
       <div className=''>
+        
         <form  onSubmit={(e)=>{
                 Submit(e)
             }} className=' flex flex-col justify-center
-        items-center-safe gap-10'>
+        items-center-safe text-white gap-10'>
 
             <input 
             value={email}
@@ -44,6 +53,7 @@ const Login = ({handleLogin}) => {
 
         </form>
       </div>
+    </div>
     </div>
   )
 }
