@@ -4,13 +4,14 @@ import TasksNumber from '../Others/TasksNumber'
 import TaskLists from '../Others/TaskLists'
 import ViewTasks from '../Others/ViewTasks'
 
-const EmployeeDashboard = () => {
+const EmployeeDashboard = ({data}) => {
+
   return (
     
     <>
-    <Header/>
-    <TasksNumber/>
-    <TaskLists/>
+    <Header data={data}/>
+    <TasksNumber data={data}/>
+    <TaskLists data={data}/>
     
     
     </>
