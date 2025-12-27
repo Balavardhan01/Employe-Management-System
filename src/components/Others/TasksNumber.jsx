@@ -2,7 +2,7 @@ import React from 'react'
 
 const TasksNumber = ({data}) => {
   return (
-    <div className='flex flex-row  h-20 justify-around  mt-10'>
+    <div className='flex flex-row text-white h-20 justify-around  mt-10'>
        <div className='bg-blue-300   w-[23%] flex flex-col rounded-xl justify-center px-4 hover:bg-blue-400 '>
         <h1 className='font-bold text-2xl'>{data.taskStats.newTask}</h1>
         <h3 className='font-semibold text-lg'>New Tasks</h3>

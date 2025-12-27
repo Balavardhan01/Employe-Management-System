@@ -2,7 +2,7 @@ import React from 'react'
 
 const CompleteTask = ({data}) => {
   return (
-     <div className='bg-cyan-900 shrink-0 rounded-2xl p-3 h-110 w-75'>
+     <div className='bg-cyan-900 shrink-0 text-white rounded-2xl p-3 h-110 w-75'>
            <div className='flex flex-row justify-between'>
             <h4 className='bg-red-700 px-2'>{data.category}</h4>
             <h4 className='font-semibold'>{data.date}</h4>

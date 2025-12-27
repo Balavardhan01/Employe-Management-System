@@ -1,5 +1,5 @@
 import React from 'react'
-import { setLocalStorage } from '../../Utils/LocalStorage'
+
 
 const Header = ({data}) => {
      
@@ -11,7 +11,7 @@ const Header = ({data}) => {
     // }
    
       const logoutUser=()=>{
-        localStorage.setItem('loggedInUser','')
+        localStorage.removeItem('loggedInUser')
         window.location.reload()
       }
 
@@ -22,7 +22,8 @@ const Header = ({data}) => {
 
          <div>
             <h3 className='text-2xl'>Hello,</h3>
-            <h2 className='text-3xl'>username🤘</h2>
+           <h2 className='text-3xl'>{data?.firstName || 'Employee'} 🤘</h2>
+
          </div>
 
          <button onClick={logoutUser} className='bg-red-500 rounded px-4 py-1 cursor-pointer border-none outline-none hover:bg-red-400 text-xl active:scale-87'>Log out</button>
