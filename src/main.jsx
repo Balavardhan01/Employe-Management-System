@@ -6,7 +6,7 @@ import { StrictMode } from 'react'
 
 
 createRoot(document.getElementById('root')).render(
-    <StrictMode>
+   
         
          <AuthProvider>
             <App />
@@ -16,7 +16,7 @@ createRoot(document.getElementById('root')).render(
               
      
          
-    </StrictMode>
+   
  
   
 )

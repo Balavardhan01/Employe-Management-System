@@ -4,10 +4,10 @@ import CreateTask from '../Others/CreateTask'
 import ViewTasks from '../Others/ViewTasks'
 
 
-const AdminDashboard = () => {
+const AdminDashboard = (props) => {
   return (
     <div className='h-screen w-full p-8'>
-       <Header/>
+       <Header changeUser={props.changeUser}/>
        <CreateTask/>
        <ViewTasks/>
       

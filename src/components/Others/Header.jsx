@@ -1,33 +1,25 @@
-import React from 'react'
+const Header = ({ changeUser, data }) => {
 
-
-const Header = ({data}) => {
-     
-    // const [username, setUsername] = useState("")
-    // if(!data){
-    //   setUsername('Admin')
-    // }else{
-    //   setUsername(data.firstName)
-    // }
-   
-      const logoutUser=()=>{
-        localStorage.removeItem('loggedInUser')
-        window.location.reload()
-      }
+  const logoutUser = () => {
+    localStorage.removeItem('loggedInUser')
+    changeUser('')
+  }
 
   return (
-    <div>
-       <div className=' mt-2 flex items-end justify-between p-3 text-white'>
+    <div className='mt-2 flex items-end justify-between p-3 text-white'>
+      <div>
+        <h3 className='text-2xl'>Hello,</h3>
+        <h2 className='text-3xl'>
+          {data?.firstName || 'Admin'} 🤘
+        </h2>
+      </div>
 
-
-         <div>
-            <h3 className='text-2xl'>Hello,</h3>
-           <h2 className='text-3xl'>{data?.firstName || 'Employee'} 🤘</h2>
-
-         </div>
-
-         <button onClick={logoutUser} className='bg-red-500 rounded px-4 py-1 cursor-pointer border-none outline-none hover:bg-red-400 text-xl active:scale-87'>Log out</button>
-       </div>
+      <button
+        onClick={logoutUser}
+        className='bg-red-500 rounded px-4 py-1 cursor-pointer hover:bg-red-400 text-xl'
+      >
+        Log out
+      </button>
     </div>
   )
 }
